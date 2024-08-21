@@ -1,0 +1,449 @@
+===Database novelty_store
+
+== Table structure for table auth_group
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|**name**|varchar(80)|No|
+== Dumping data for table auth_group
+
+== Table structure for table auth_group_permissions
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|**group_id**|int(11)|No|
+|**permission_id**|int(11)|No|
+== Dumping data for table auth_group_permissions
+
+== Table structure for table auth_permission
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|name|varchar(255)|No|
+|**content_type_id**|int(11)|No|
+|**codename**|varchar(100)|No|
+== Dumping data for table auth_permission
+
+|1|Can add log entry|1|add_logentry
+|2|Can change log entry|1|change_logentry
+|3|Can delete log entry|1|delete_logentry
+|4|Can add permission|2|add_permission
+|5|Can change permission|2|change_permission
+|6|Can delete permission|2|delete_permission
+|7|Can add group|3|add_group
+|8|Can change group|3|change_group
+|9|Can delete group|3|delete_group
+|10|Can add user|4|add_user
+|11|Can change user|4|change_user
+|12|Can delete user|4|delete_user
+|13|Can add content type|5|add_contenttype
+|14|Can change content type|5|change_contenttype
+|15|Can delete content type|5|delete_contenttype
+|16|Can add session|6|add_session
+|17|Can change session|6|change_session
+|18|Can delete session|6|delete_session
+|19|Can add billing|7|add_billing
+|20|Can change billing|7|change_billing
+|21|Can delete billing|7|delete_billing
+|22|Can add cart_details|8|add_cart_details
+|23|Can change cart_details|8|change_cart_details
+|24|Can delete cart_details|8|delete_cart_details
+|25|Can add deliverydtails|9|add_deliverydtails
+|26|Can change deliverydtails|9|change_deliverydtails
+|27|Can delete deliverydtails|9|delete_deliverydtails
+|28|Can add exchange offer|10|add_exchangeoffer
+|29|Can change exchange offer|10|change_exchangeoffer
+|30|Can delete exchange offer|10|delete_exchangeoffer
+|31|Can add feed back form|11|add_feedbackform
+|32|Can change feed back form|11|change_feedbackform
+|33|Can delete feed back form|11|delete_feedbackform
+|34|Can add m b_scheme|12|add_mb_scheme
+|35|Can change m b_scheme|12|change_mb_scheme
+|36|Can delete m b_scheme|12|delete_mb_scheme
+|37|Can add order_details|13|add_order_details
+|38|Can change order_details|13|change_order_details
+|39|Can delete order_details|13|delete_order_details
+|40|Can add payment|14|add_payment
+|41|Can change payment|14|change_payment
+|42|Can delete payment|14|delete_payment
+|43|Can add pro category|15|add_procategory
+|44|Can change pro category|15|change_procategory
+|45|Can delete pro category|15|delete_procategory
+|46|Can add product|16|add_product
+|47|Can change product|16|change_product
+|48|Can delete product|16|delete_product
+|49|Can add purchase_ items|17|add_purchase_items
+|50|Can change purchase_ items|17|change_purchase_items
+|51|Can delete purchase_ items|17|delete_purchase_items
+|52|Can add service|18|add_service
+|53|Can change service|18|change_service
+|54|Can delete service|18|delete_service
+|55|Can add stock items|19|add_stockitems
+|56|Can change stock items|19|change_stockitems
+|57|Can delete stock items|19|delete_stockitems
+|58|Can add supplier|20|add_supplier
+|59|Can change supplier|20|change_supplier
+|60|Can delete supplier|20|delete_supplier
+|61|Can add user login|21|add_userlogin
+|62|Can change user login|21|change_userlogin
+|63|Can delete user login|21|delete_userlogin
+|64|Can add user registration|22|add_userregistration
+|65|Can change user registration|22|change_userregistration
+|66|Can delete user registration|22|delete_userregistration
+== Table structure for table auth_user
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|password|varchar(128)|No|
+|last_login|datetime(6)|Yes|NULL
+|is_superuser|tinyint(1)|No|
+|**username**|varchar(150)|No|
+|first_name|varchar(30)|No|
+|last_name|varchar(150)|No|
+|email|varchar(254)|No|
+|is_staff|tinyint(1)|No|
+|is_active|tinyint(1)|No|
+|date_joined|datetime(6)|No|
+== Dumping data for table auth_user
+
+== Table structure for table auth_user_groups
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|**user_id**|int(11)|No|
+|**group_id**|int(11)|No|
+== Dumping data for table auth_user_groups
+
+== Table structure for table auth_user_user_permissions
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|**user_id**|int(11)|No|
+|**permission_id**|int(11)|No|
+== Dumping data for table auth_user_user_permissions
+
+== Table structure for table django_admin_log
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|action_time|datetime(6)|No|
+|object_id|longtext|Yes|NULL
+|object_repr|varchar(200)|No|
+|action_flag|smallint(5)|No|
+|change_message|longtext|No|
+|content_type_id|int(11)|Yes|NULL
+|user_id|int(11)|No|
+== Dumping data for table django_admin_log
+
+== Table structure for table django_content_type
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|**app_label**|varchar(100)|No|
+|**model**|varchar(100)|No|
+== Dumping data for table django_content_type
+
+|1|admin|logentry
+|3|auth|group
+|2|auth|permission
+|4|auth|user
+|5|contenttypes|contenttype
+|7|newapplianceapp|billing
+|8|newapplianceapp|cart_details
+|9|newapplianceapp|deliverydtails
+|10|newapplianceapp|exchangeoffer
+|11|newapplianceapp|feedbackform
+|12|newapplianceapp|mb_scheme
+|13|newapplianceapp|order_details
+|14|newapplianceapp|payment
+|15|newapplianceapp|procategory
+|16|newapplianceapp|product
+|17|newapplianceapp|purchase_items
+|18|newapplianceapp|service
+|19|newapplianceapp|stockitems
+|20|newapplianceapp|supplier
+|21|newapplianceapp|userlogin
+|22|newapplianceapp|userregistration
+|6|sessions|session
+== Table structure for table django_migrations
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|app|varchar(255)|No|
+|name|varchar(255)|No|
+|applied|datetime(6)|No|
+== Dumping data for table django_migrations
+
+|1|contenttypes|0001_initial|2019-04-04 05:56:55.443212
+|2|auth|0001_initial|2019-04-04 05:57:33.563392
+|3|admin|0001_initial|2019-04-04 05:57:39.710744
+|4|admin|0002_logentry_remove_auto_add|2019-04-04 05:57:40.473787
+|5|contenttypes|0002_remove_content_type_name|2019-04-04 05:57:46.174113
+|6|auth|0002_alter_permission_name_max_length|2019-04-04 05:57:51.813436
+|7|auth|0003_alter_user_email_max_length|2019-04-04 05:57:54.054564
+|8|auth|0004_alter_user_username_opts|2019-04-04 05:57:54.407584
+|9|auth|0005_alter_user_last_login_null|2019-04-04 05:57:55.786663
+|10|auth|0006_require_contenttypes_0002|2019-04-04 05:57:55.851667
+|11|auth|0007_alter_validators_add_error_messages|2019-04-04 05:57:56.010676
+|12|auth|0008_alter_user_username_max_length|2019-04-04 05:58:00.128912
+|13|auth|0009_alter_user_last_name_max_length|2019-04-04 05:58:05.697230
+|14|sessions|0001_initial|2019-04-04 05:58:08.988418
+|15|newapplianceapp|0001_initial|2019-04-04 06:00:20.054915
+== Table structure for table django_session
+
+|------
+|Column|Type|Null|Default
+|------
+|//**session_key**//|varchar(40)|No|
+|session_data|longtext|No|
+|expire_date|datetime(6)|No|
+== Dumping data for table django_session
+
+|js7omegwejddnz9acpy1h4bjsyhn4eo1|ZmY5NTJhMzlhOTYyZmRmYzk3Yjc5YTE2ODQ3YjI5M2E1ZmMyNzZmYjp7InVpZCI6ImFkbWluQGdtYWlsLmNvbSJ9|2019-04-18 06:30:31.464522
+== Table structure for table newapplianceapp_billing
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|orderid|int(11)|Yes|NULL
+|customersid|varchar(254)|Yes|NULL
+|bill_date|date|Yes|NULL
+|items|varchar(200)|Yes|NULL
+|total|int(11)|Yes|NULL
+|gst|int(11)|Yes|NULL
+|tax_total|int(11)|Yes|NULL
+|shipping_charge|int(11)|Yes|NULL
+|grandtotal|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_billing
+
+== Table structure for table newapplianceapp_cart_details
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|userid|varchar(200)|Yes|NULL
+|productname|varchar(200)|Yes|NULL
+|date|datetime(6)|Yes|NULL
+|order_status|varchar(200)|Yes|NULL
+|unitprice|int(11)|Yes|NULL
+|Total|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_cart_details
+
+== Table structure for table newapplianceapp_deliverydtails
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|Deliverydate|date|Yes|NULL
+|Trackingno|varchar(200)|Yes|NULL
+|Packingstatus|varchar(200)|Yes|NULL
+|Shippingstatus|varchar(200)|Yes|NULL
+|Delivery_status|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_deliverydtails
+
+== Table structure for table newapplianceapp_exchangeoffer
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|exchngname|varchar(200)|Yes|NULL
+|dscrptn|varchar(500)|Yes|NULL
+|discount|int(11)|Yes|NULL
+|Start_date|date|Yes|NULL
+|finish_date|date|Yes|NULL
+|coupon_code|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_exchangeoffer
+
+== Table structure for table newapplianceapp_feedbackform
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|userid|varchar(200)|Yes|NULL
+|servicefeedback|varchar(200)|Yes|NULL
+|comments|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_feedbackform
+
+== Table structure for table newapplianceapp_mb_scheme
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|Schemeno|varchar(200)|Yes|NULL
+|Customer_name|varchar(200)|Yes|NULL
+|Address|varchar(200)|Yes|NULL
+|Email_Id|varchar(200)|Yes|NULL
+|Mobileno|varchar(200)|Yes|NULL
+|Month|varchar(200)|Yes|NULL
+|Winner|varchar(200)|Yes|NULL
+|Coupon_code|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_mb_scheme
+
+== Table structure for table newapplianceapp_order_details
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|order_date|datetime(6)|Yes|NULL
+|quantity|int(11)|Yes|NULL
+|unitprice|int(11)|Yes|NULL
+|Total|int(11)|Yes|NULL
+|uid|varchar(50)|Yes|NULL
+|items|varchar(50)|Yes|NULL
+|Amonth|int(11)|Yes|NULL
+|Ayear|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_order_details
+
+== Table structure for table newapplianceapp_payment
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|Paymenttype|varchar(200)|Yes|NULL
+|BankName|varchar(200)|Yes|NULL
+|Amount|int(11)|Yes|NULL
+|Paymentdate|date|Yes|NULL
+== Dumping data for table newapplianceapp_payment
+
+== Table structure for table newapplianceapp_procategory
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|cat_name|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_procategory
+
+== Table structure for table newapplianceapp_product
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|pname|varchar(200)|Yes|NULL
+|category|varchar(200)|Yes|NULL
+|description|varchar(500)|Yes|NULL
+|image1|varchar(100)|No|
+|price|int(11)|Yes|NULL
+|gst|int(11)|Yes|NULL
+|cgst|int(11)|Yes|NULL
+|sgst|int(11)|Yes|NULL
+|total|int(11)|Yes|NULL
+|discount|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_product
+
+== Table structure for table newapplianceapp_purchase_items
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|pitem|varchar(200)|Yes|NULL
+|pprice|int(11)|Yes|NULL
+|Quantity|int(11)|Yes|NULL
+|Purchase_date|date|Yes|NULL
+|Total_price|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_purchase_items
+
+== Table structure for table newapplianceapp_service
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|Product_name|varchar(200)|Yes|NULL
+|Description|varchar(500)|Yes|NULL
+|Price|int(11)|Yes|NULL
+|Service_men_name|varchar(200)|Yes|NULL
+|Service_men_Mbno|varchar(200)|Yes|NULL
+== Dumping data for table newapplianceapp_service
+
+== Table structure for table newapplianceapp_stockitems
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|transaction_no|varchar(200)|Yes|NULL
+|Itemname|varchar(200)|Yes|NULL
+|price|int(11)|Yes|NULL
+|gst|int(11)|Yes|NULL
+|cgst|int(11)|Yes|NULL
+|sgst|int(11)|Yes|NULL
+|transport_charges|int(11)|Yes|NULL
+|sdate|date|Yes|NULL
+|total|int(11)|Yes|NULL
+|sold_out|int(11)|Yes|NULL
+|availability|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_stockitems
+
+== Table structure for table newapplianceapp_supplier
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|supplier_name|varchar(200)|Yes|NULL
+|address|varchar(200)|Yes|NULL
+|mobile_no|varchar(200)|Yes|NULL
+|email|varchar(200)|Yes|NULL
+|product_name|varchar(200)|Yes|NULL
+|quantity|int(11)|Yes|NULL
+== Dumping data for table newapplianceapp_supplier
+
+== Table structure for table newapplianceapp_userlogin
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|emailid|varchar(200)|Yes|NULL
+|password|varchar(50)|Yes|NULL
+|utype|varchar(50)|Yes|NULL
+== Dumping data for table newapplianceapp_userlogin
+
+|1|admin@gmail.com|admin12345|admin
+== Table structure for table newapplianceapp_userregistration
+
+|------
+|Column|Type|Null|Default
+|------
+|//**id**//|int(11)|No|
+|Firstname|varchar(200)|Yes|NULL
+|Lastname|varchar(200)|Yes|NULL
+|Gender|varchar(100)|Yes|NULL
+|Address|varchar(400)|Yes|NULL
+|City|varchar(100)|Yes|NULL
+|Pincode|int(11)|Yes|NULL
+|MobileNumber|varchar(10)|Yes|NULL
+|EmailID|varchar(100)|Yes|NULL
+|Password|varchar(50)|Yes|NULL
+|ConfirmPassword|varchar(50)|Yes|NULL
+== Dumping data for table newapplianceapp_userregistration
+
